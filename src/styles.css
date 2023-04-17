@@ -83,3 +83,12 @@ a {
 .layer {
   width: 80%;
 }
+
+.author,
+.author-link {
+  color: #ee82ee;
+  margin-left: 460px;
+}
+.author-link {
+  color: #ffffff;
+}
