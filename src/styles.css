@@ -1,94 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-.container {
-  margin: 50px auto;
+body {
+  font-size: 20px;
+  font-family: "Philosopher", sans-serif;
+  background: rgba(44, 174, 186, 0.7);
   color: #ffffff;
+}
+
+.wrapper {
+  margin: 50px auto;
+  max-width: 600px;
+}
+.weather-container {
+  padding: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
   background: linear-gradient(rgba(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
     url("./images/pexels-arnie-chou-1229042.jpg") center/cover no-repeat;
 }
 
-body {
-  font-size: 20px;
-  font-family: "Philosopher", sans-serif;
-  background: linear-gradient(rgba(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
-    url("./images/pexels-arnie-chou-1229042.jpg") center/cover no-repeat;
-}
-.card {
-  background: linear-gradient(rgba(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
-    url("./images/pexels-arnie-chou-1229042.jpg") center/cover no-repeat;
-}
-.city-input {
-  margin-right: 15px;
-}
-.click {
-  padding: 3px 15px;
-  color: #ffffff;
-  border: none;
-  transition: 200ms ease-in-out;
-  -webkit-transition: 200ms ease-in-out;
-  -moz-transition: 200ms ease-in-out;
-  -ms-transition: 200ms ease-in-out;
-  -o-transition: 200ms ease-in-out;
-}
-.blue {
-  margin-left: 100px;
-  background: #0000ff;
-}
-.blue:hover {
-  background: #ffffff;
-  color: #0000ff;
-  border: 0.5px solid #0000ff;
-}
-.success {
-  margin-left: 150px;
-  background: #099a51;
-}
-.success:hover {
-  background: #ffffff;
-  color: #099a51;
-  border: 0.5px solid #099a51;
-}
 a {
   text-decoration: none;
   color: #ffffff;
 }
-.layer {
-  margin: 0 auto;
+ul {
+  padding: 0;
+  margin: 0;
 }
-.fa-solid {
-  font-size: 30px;
+li {
+  list-style-type: none;
 }
-.fa-cloud-sun {
-  color: #ffc107;
-}
-.snow {
-  color: #4b0082;
-}
-
-.tsunami {
-  color: #235b61;
-}
-.showers {
-  color: #ee82ee;
-}
-.moon {
-  color: #ffa500;
-}
-.rain {
-  color: #121236;
-}
-.bolt {
-  color: #ff0000;
-}
-.layer {
-  width: 80%;
-}
-.author,
-.author-link {
+small {
   color: #0000ff;
-  margin-left: 460px;
-  line-height: 0;
-}
-.author-link {
-  color: #ffffff;
 }
