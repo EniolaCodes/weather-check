@@ -88,6 +88,7 @@ a {
 .author-link {
   color: #ee82ee;
   margin-left: 460px;
+  line-height: 0;
 }
 .author-link {
   color: #ffffff;
