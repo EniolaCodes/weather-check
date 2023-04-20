@@ -37,9 +37,22 @@ a {
 .units {
   position: relative;
   top: -10px;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: bolder;
 }
 .active {
   color: #ffffff;
   cursor: default;
+}
+.weather-forecast {
+  margin-top: 10px;
+  text-align: center;
+}
+.weather-forecast-date,
+.weather-forecast-temperature-min {
+  font-size: 18px;
+  opacity: 0.6;
+}
+.weather-forecast-temperatures {
+  font-size: 16px;
 }
