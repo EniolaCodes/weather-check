@@ -24,6 +24,33 @@ let days = [
 let day = days[now.getDay()];
 document.querySelector("#time").innerHTML = `${day} ${h}:${m}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = ` <div class="row">`;
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+              <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR65TbYodQlvB8RSVw1QVIMUEif8qIfzptN3w&usqp=CAU"
+                  width="30"
+                  alt=""
+                />
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max">18°</span>
+                  <span class="weather-forecast-temperature-min">12°</span>
+                </div>
+              </div>
+            `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function submitValue(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
@@ -103,3 +130,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 search("Lagos");
+displayForecast();
