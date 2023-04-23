@@ -38,10 +38,10 @@ function displayForecast(response) {
 
   let forecastHTML = ` <div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
-    forecastHTML =
-      forecastHTML +
-      ` 
+    if (index < 6)
+      forecastHTML =
+        forecastHTML +
+        ` 
               <div class="col-2">
                 <div class="weather-forecast-date">${formatDay(
                   forecastDay.dt
@@ -62,7 +62,7 @@ function displayForecast(response) {
                   )}°</span>
                 </div>
               </div>
-            `;}
+            `;
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
@@ -83,10 +83,8 @@ function search(city) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "bb0df6985c2eab6a171d64a6bacbb4e1";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -115,10 +113,8 @@ function weatherCondition(response) {
 }
 
 function searchLocation(position) {
-  console.log(position);
   let apiKey = "8829e8c6941f34c584905acfa8203214";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(weatherCondition);
 }
 function getCurrentLocation(event) {
@@ -129,31 +125,4 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
-
 search("Lagos");
-displayForecast();
